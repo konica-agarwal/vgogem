@@ -1,0 +1,113 @@
+  <div class="modal fade modal-inventory" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+<div class="modal-body">
+<div class="container-fluid">
+
+<!-- login form -->
+	<form class="form-width" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" method="post" *ngIf="showFirst"  [@slideInOut]>
+         	<h5 class="heading-size">Login</h5>
+      
+		<div class="form-group">
+			<label for="email">E-mail:</label>
+			<input type="text" name="email" id="email" class="form-control" [(ngModel)]="model.email" required email #email=ngModel>
+		</div>
+		<div *ngIf="!email.valid && email.touched" class="alert alert-danger">
+			E-mail is required
+           <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+		<div class="form-group">
+			<label for="pwd">Password:</label>
+			<input type="Password" name="pwd" id="pwd" class="form-control" [(ngModel)]="model.pwd" required #pswd="ngModel">
+		</div>
+		<div *ngIf="!pswd.valid && pswd.touched" class="alert alert-danger">
+           pasword is required
+        </div>
+
+		<input type="submit" class="btn btn-success" name="submit" [disabled]="!loginForm.form.valid" >
+		<button class="btn btn-primary loginButton leftMargin" (click)="toggle()" *ngIf=showFirst>Register</button>	
+	</form>
+    
+   
+  <!-- register form -->
+  
+	<form class="form-width" #loginForm="ngForm" (ngSubmit)="onSubmit()" method="post" *ngIf="!showFirst"  [@slideInOut] id="form_add">
+		  <h5 class="heading-size">Register</h5>
+		  <div class="row">
+	<div class="col-md-6">  	
+		<div class="form-group ">
+			<label for="fname">First Name</label>
+			<input type="text" name="fname" class="form-control" id="fname" [(ngModel)]="model.fname" required #fname="ngModel">
+		</div>
+		<div *ngIf="!fname.valid && fname.touched" class="alert alert-danger">
+           Name is required
+        </div>
+    </div>
+    <div class="col-md-6">	    
+        <div class="form-group">
+			<label for="lname">Last Name</label>
+			<input type="text" name="lname" class="form-control" id="lname" [(ngModel)]="model.lname" required #lname="ngModel">
+		</div>
+		<div *ngIf="!lname.valid && lname.touched" class="alert alert-danger">
+          Last Name is required
+        </div>
+    </div>
+    <div class="col-md-6">    
+        <div class="form-group">
+			<label for="bday">Birthday</label>
+			<input type="date" name="bday" class="form-control" id="bday" [(ngModel)]="model.bday" required #bday="ngModel">
+		</div>
+		<div *ngIf="!bday.valid && bday.touched" class="alert alert-danger">
+           Birthday is required
+        </div>
+    </div>
+        
+	<div class="col-md-6">
+		<label class="topSpace">Gender </label><br>
+		<div class="form-check-inline">
+			<label class="form-check-label">
+				<input type="radio" name="gender" class="form-check-input" [(ngModel)]="model.gender" value="male" #gender="ngModel" checked0>
+			Male</label>
+		</div>
+		<div class="form-check-inline">	
+			<label class="form-check-label">
+				<input type="radio" name="gender" value="female" class="form-check-input" [(ngModel)]="model.gender" #gender="ngModel">
+			Female</label>
+		</div>
+	</div>
+	<div class="col-md-6">
+	   <div class="form-group">
+			<label for="email">E-mail</label>
+			<input type="text" name="email" id="email" class="form-control" [(ngModel)]="model.email" required email #email=ngModel>
+		</div>
+		<div *ngIf="!email.valid && email.touched" class="alert alert-danger">
+			E-mail is required
+           <div *ngIf="email.errors.email">Email must be a valid email address</div>
+        </div>
+    </div>
+    <div class="col-md-6">    	
+        <div class="form-group">
+			<label for="pwd">Password</label>
+			<input type="Password" name="pwd" id="pwd" class="form-control" [(ngModel)]="model.pwd" required #pswd="ngModel">
+		</div>
+		<div *ngIf="!pswd.valid && pswd.touched" class="alert alert-danger">
+           pasword is required
+        </div>
+    </div>    
+        <div class="col-md-3">
+		<input type="submit" class="btn btn-success" name="Register" [disabled]="!loginForm.form.valid">
+		</div>	         
+	   <div class="col-md-3">
+			<button class="btn btn-primary" (click)="toggle()" *ngIf=!showFirst>Login</button>
+		</div>
+	</div>
+	</form>
+ 
+</div>
+</div>
+</div>
+</div>
+</div>

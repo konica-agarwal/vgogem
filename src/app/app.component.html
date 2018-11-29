@@ -68,10 +68,14 @@
     <a href="#" class="profile-dropdown">
       <i class="fa fa-user"></i>
     </a>
-    <a href="#" class="btn-login btn bg-gray">Login with Steam</a>
+    <a data-toggle="modal" data-target="#loginModal" class="btn-login btn bg-gray">Login with Steam</a>
   </div>
+  <app-form></app-form>
 </nav>
+
+  
 <div class="container-fluid">
+  <div [hidden]="!visible" (window:resize)="onResize($event)" >
   <div class="chat-panel" id="sidebar">
         <div class="online-display gradient">
           Online users: <b>60</b>
@@ -89,7 +93,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">9</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">9</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -98,7 +102,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">5</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">5</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -107,7 +111,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">20</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">20</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -116,7 +120,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">22</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">22</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -125,7 +129,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">36</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">36</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -134,7 +138,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">50</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">50</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -143,7 +147,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">48</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">48</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -152,7 +156,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">10</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">10</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -161,7 +165,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">15</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">15</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -170,7 +174,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">38</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">38</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -179,7 +183,7 @@
               <img src="/assets/img/user-img02.jpg" alt="user" />
             </div>
             <div class="content-sec">
-              <div class="name level"><span class="players-name">MîLåNâ</span> <span class="badge bg-blue">22</span></div>
+              <div class="name level"><span class="players-name">MîLåNâ...</span> <span class="badge bg-blue">22</span></div>
               <div class="comment">But be car next time ;)</div>
             </div>
           </div>
@@ -195,6 +199,7 @@
           </div>
         </div>
       </div>
+      </div>
   <router-outlet></router-outlet>
+
 </div>
-<div>footer works!</div>

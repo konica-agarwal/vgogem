@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Chart} from 'chart.js';
 
+
 @Component({
   selector: 'app-coal',
   templateUrl: './coal.component.html',
@@ -13,7 +14,7 @@ export class CoalComponent implements OnInit {
   Doughnut=[];
 
   ngOnInit() {
-  	this.Doughnut = new Chart('doughnut', {
+  this.Doughnut = new Chart('doughnut', {
       type: 'doughnut',
       data: {
       	labels: ["MîLåNâ", "Phibbix", "VS Gaming"],
@@ -37,5 +38,7 @@ export class CoalComponent implements OnInit {
       }
     });
   }
+
+  diamond = 'Windstorm';
 
 }

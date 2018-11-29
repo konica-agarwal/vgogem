@@ -9,11 +9,11 @@ import {Chart} from 'chart.js';
 export class PlantComponent implements OnInit {
 
   constructor() { }
-
-  Doughnut=[];
-
+ Doughnut=[];
+ 
   ngOnInit() {
-  	this.Doughnut = new Chart('doughnut', {
+
+  this.Doughnut = new Chart('doughnut', {
       type: 'doughnut',
       data: {
       	labels: ["MîLåNâ", "Phibbix", "VS Gaming"],
@@ -38,4 +38,5 @@ export class PlantComponent implements OnInit {
     });
   }
 
+  diamond = 'Windstorm';
 }

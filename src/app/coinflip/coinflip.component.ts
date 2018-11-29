@@ -1,12 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {Chart} from 'chart.js';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
+
 
 @Component({
   selector: 'app-coinflip',
   templateUrl: './coinflip.component.html',
-  styleUrls: ['./coinflip.component.css']
+  styleUrls: ['./coinflip.component.css'],
+ 
 })
 export class CoinflipComponent implements OnInit {
+
+
+ tails : boolean = false;
 
   constructor() { }
 
@@ -37,5 +43,7 @@ export class CoinflipComponent implements OnInit {
       }
     });
   }
+
+
 
 }

@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {CounterModule} from 'angular-circle-counter';
+import { FlipModule } from 'ngx-flip';
+import { AngularResizedEventModule } from 'angular-resize-event';
+import { FormsModule }   from '@angular/forms';
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -13,6 +18,11 @@ import { CoinflipComponent } from './coinflip/coinflip.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { CoinFlipHistoryComponent } from './coin-flip-history/coin-flip-history.component';
+import { DoughnutComponent } from './doughnut/doughnut.component';
+import { TopPanelComponent } from './top-panel/top-panel.component';
+import { IconComponent } from './icon/icon.component';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -20,8 +30,13 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   imports: [
     BrowserModule,
+     FormsModule,
     AppRoutingModule,
     DragScrollModule,
+    CounterModule,
+     FlipModule,
+    BrowserAnimationsModule,
+    AngularResizedEventModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
       backgroundPadding: -4,
@@ -48,7 +63,12 @@ import { AppRoutingModule } from './app-routing.module';
     PlantComponent,
     CoinflipComponent,
     ProfileComponent,
-    DashboardComponent
+    DashboardComponent,
+    CoinFlipHistoryComponent,
+    DoughnutComponent,
+    TopPanelComponent,
+    IconComponent,
+    FormComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
