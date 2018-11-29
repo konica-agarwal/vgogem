@@ -23,6 +23,7 @@ import { DoughnutComponent } from './doughnut/doughnut.component';
 import { TopPanelComponent } from './top-panel/top-panel.component';
 import { IconComponent } from './icon/icon.component';
 import { FormComponent } from './form/form.component';
+import { ModaComponent } from './moda/moda.component';
 
 
 
@@ -68,7 +69,8 @@ import { FormComponent } from './form/form.component';
     DoughnutComponent,
     TopPanelComponent,
     IconComponent,
-    FormComponent
+    FormComponent,
+    ModaComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

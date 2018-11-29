@@ -26,6 +26,7 @@
     "angular-breakpoints": "^1.2.0",
     "angular-circle-counter": "^1.1.0",
     "angular-flickity": "^3.1.4",
+    "angular-font-awesome": "^3.1.2",
     "angular-resize-event": "^0.4.4",
     "bootstrap": "^4.1.3",
     "chart.js": "^2.7.2",
