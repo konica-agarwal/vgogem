@@ -100,18 +100,17 @@ export class AppComponent implements OnInit {
         }
         });
       });
+
+       $(window).on('load resize', function () {
+        if ($(window).width() < 1200){
+          $(".chat-panel").addClass("collapse in");
+        }
+        else{
+          $(".chat-panel").removeClass("collapse in");
+        };
+      });
   }	
 
-   visible: boolean = true;
-  breakpoint: number = 1200;
 
-  onResize(event) {
-    const w = event.target.innerWidth;
-    if (w >= this.breakpoint) {
-      this.visible = true;
-    } else {
-     
-      this.visible = false;
-    }
-  }
+
 }

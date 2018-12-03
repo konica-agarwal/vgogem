@@ -74,8 +74,8 @@
 
   
 <div class="container-fluid">
-  <div [hidden]="!visible" (window:resize)="onResize($event)" >
-  <div class="chat-panel" id="sidebar">
+ <!--  <div [hidden]="!visible" (window:resize)="onResize($event)" > -->
+  <div class="chat-panel collapse in" id="sidebar">
         <div class="online-display gradient">
           Online users: <b>60</b>
           <a href="#" class="social-icon">
@@ -198,7 +198,7 @@
           </div>
         </div>
       </div>
-      </div>
+   <!--    </div> -->
                 <div class="modal fade bd-example-modal-lg modal-inventory" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -452,6 +452,10 @@
         </div>
       </div>
     </div>
+
+    <a class="chat-bar-menu rounded-circle gradient" href="#sidebar" data-toggle="collapse">
+      <i class="fa fa-comments"></i>
+    </a>
   <router-outlet></router-outlet>
 
 </div>

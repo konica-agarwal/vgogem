@@ -10,6 +10,7 @@ import { AngularResizedEventModule } from 'angular-resize-event';
 import { FormsModule }   from '@angular/forms';
 
 
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DiamondComponent } from './diamond/diamond.component';
 import { CoalComponent } from './coal/coal.component';
