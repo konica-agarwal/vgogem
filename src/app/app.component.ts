@@ -43,60 +43,6 @@ export class AppComponent implements OnInit {
           duration:6000
       },'linear');
     });
-
-         
-      (function() {
-        var canvas = document.getElementById('canvas'),
-          circlesCreated = false;
-        function onScroll() {
-          if (!circlesCreated && elementInViewport(canvas)) {
-            circlesCreated = true;
-            createCircles();
-          }
-        }
-        function elementInViewport(el) {
-          var rect = el.getBoundingClientRect();
-          return (
-            rect.top  >= 0 &&
-            rect.left >= 0 &&
-            rect.top  <= (window.innerHeight || document.documentElement.clientHeight)
-          );
-        }
-        function createCircles() {
-          var colors = [
-              ['#595980', '#ffffff']
-            ],
-            circles = [];
-          for (var i = 1; i <= colors.length; i++) {
-            var child = document.getElementById('circles-' + i),
-              circle = Circles.create({
-                id:         child.id,
-                value:      10,
-                maxValue:   10,
-                duration:   10000,
-                radius:     getWidth(),
-                width:      4,
-                colors:     colors[i - 1]
-              });
-            circles.push(circle);
-          }
-          window.onload = function(e) {
-            for (var i = 0; i < circles.length; i++) {
-              circles[i].updateRadius(getWidth());
-            }
-          };
-          window.onresize = function(e) {
-            for (var i = 0; i < circles.length; i++) {
-              circles[i].updateRadius(getWidth());
-            }
-          };
-          function getWidth() {
-            let jpw = $( ".jackpot-timer" ).width();
-            return jpw / 2;
-          }
-        }
-        window.onscroll = onScroll;
-      })();
   
 
     
