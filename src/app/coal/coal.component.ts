@@ -14,10 +14,10 @@ export class CoalComponent implements OnInit {
   Doughnut=[];
 
   ngOnInit() {
-  this.Doughnut = new Chart('doughnut', {
+    this.Doughnut = new Chart('doughnut', {
       type: 'doughnut',
       data: {
-      	labels: ["MîLåNâ", "Phibbix", "VS Gaming"],
+        labels: ["MîLåNâ", "Phibbix", "VS Gaming"],
           datasets: [
             {
               labels: 'My First dataset',
@@ -31,14 +31,12 @@ export class CoalComponent implements OnInit {
           ]
       },
       options: {
-      	cutoutPercentage: 65,
-      	legend: {
-	        position: 10,
-	      },
+        cutoutPercentage: 65,
+        legend: {
+          position: 10,
+        },
       }
     });
   }
-
-  diamond = 'Windstorm';
 
 }

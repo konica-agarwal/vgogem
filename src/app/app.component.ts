@@ -1,15 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import {Chart} from 'chart.js';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-  // ...
-} from '@angular/animations';
-import { ResizedEvent } from 'angular-resize-event/resized-event';
+
 
 
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -18,7 +10,6 @@ import { CoalComponent } from './coal/coal.component';
 import { PlantComponent } from './plant/plant.component';
 import { CoinflipComponent } from './coinflip/coinflip.component';
 import { ProfileComponent } from './profile/profile.component';
-import { DoughnutComponent } from './doughnut/doughnut.component';
 import { TopPanelComponent } from './top-panel/top-panel.component';
 import { CoinFlipHistoryComponent } from './coin-flip-history/coin-flip-history.component';
 
@@ -32,8 +23,34 @@ import { CoinFlipHistoryComponent } from './coin-flip-history/coin-flip-history.
 export class AppComponent implements OnInit {
   title = 'vgogem-app';
 
+ Doughnut=[];
+
   ngOnInit()
   {
+    this.Doughnut = new Chart('doughnut', {
+      type: 'doughnut',
+      data: {
+        labels: ["MîLåNâ", "Phibbix", "VS Gaming"],
+          datasets: [
+            {
+              labels: 'My First dataset',
+              data: [855, 2535, 1232],
+              backgroundColor: [
+                '#FF6384',
+                '#36A2EB',
+                '#FFCE56'
+              ]
+            }
+          ]
+      },
+      options: {
+        cutoutPercentage: 65,
+        legend: {
+          position: 10,
+        },
+      }
+    });
+
     $( document ).ready(function() {
       var startJP = (164) + (360 * 3);
       $('.jackpot-pointer').animate({  transform: startJP }, {
@@ -43,9 +60,7 @@ export class AppComponent implements OnInit {
           duration:6000
       },'linear');
     });
-  
 
-    
     $(window).on('load resize', function () {
 
       var jpWidth = $( ".jackpot" ).width();
@@ -54,7 +69,6 @@ export class AppComponent implements OnInit {
       var getScoreTextA = jpWidth * (8.93/100);
       var getScoreTextB = jpWidth * (5.36/100);
       var getScoreIcon = jpWidth * (9.82/100);
-
 
       if(jpWidth < 560){
           $( ".jackpot-timer" ).css({"top": getP, "bottom": getP, "left": getP, "right": getP});
@@ -98,10 +112,9 @@ export class AppComponent implements OnInit {
         }
         else{
           $(".chat-panel").removeClass("collapse in");
-        };
+        }
       });
+
   }	
-
-
 
 }
