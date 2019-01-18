@@ -629,6 +629,13 @@ canvas {
 	width: 100%;
 	top: 0;
 	left: 0;
+		 animation: circle 4s linear ;
+animation-iteration-count:1;
+     animation-fill-mode: forwards;
+}
+@keyframes circle {
+    from { transform:rotate(0deg); }
+    to { transform:rotate(850deg); }
 }
 .jackpot-panel .jackpot .jackpot-pointer img{
 	width: 100%;

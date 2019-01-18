@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import {Chart} from 'chart.js';
+import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
 
 
 
@@ -51,15 +52,6 @@ export class AppComponent implements OnInit {
       }
     });
 
-    $( document ).ready(function() {
-      var startJP = (164) + (360 * 3);
-      $('.jackpot-pointer').animate({  transform: startJP }, {
-          step: function(now,fx) {
-            $(this).css('-webkit-transform','rotate('+now+'deg)'); 
-          },
-          duration:6000
-      },'linear');
-    });
 
     $(window).on('load resize', function () {
 
