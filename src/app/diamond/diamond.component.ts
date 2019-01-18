@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import {Chart} from 'chart.js';
-import { trigger, state, style, animate, transition, keyframes } from '@angular/animations';
+
 
 @Component({
   selector: 'app-diamond',
   templateUrl: './diamond.component.html',
   styleUrls: ['./diamond.component.css'],
-  animations:[]
+
 })
 export class DiamondComponent implements OnInit {
 

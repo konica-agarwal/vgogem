@@ -1316,11 +1316,11 @@ animation-iteration-count:1;
           border-radius: 50%;
 }
 .coinFlipModal .players-panel .coin-flip-anim #coin-flip-here .side-a {
-  background: url(/src/assets/img/coin-red.png) no-repeat center;
+  background: url(/assets/img/coin-red.png) no-repeat center;
   background-size: cover;
 }
 .coinFlipModal .players-panel .coin-flip-anim #coin-flip-here .side-b {
-  background: url(/src/assets/img/coin-blue.png) no-repeat center;
+  background: url(/assets/img/coin-blue.png) no-repeat center;
   background-size: cover;
 }
 
