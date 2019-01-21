@@ -1994,6 +1994,18 @@ border: none;
 
 }
 @media screen and (max-width: 1200px) {
+	/*new style added*/
+	.navbar-right .btn {
+    color: #fff;
+    font-size: 16px;
+    width: auto;
+    height: 50px;
+    line-height: 32px;
+    margin-top: 20px;
+    display: inline-block;   
+    margin: 0px 10px;
+}
+/*end*/
   .chat-panel {
     background: #2e2e50;
     top: 86px;
