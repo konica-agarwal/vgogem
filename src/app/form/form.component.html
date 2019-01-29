@@ -1,4 +1,4 @@
-  <div class="modal fade modal-inventory" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade modal-inventory" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-md">
       <div class="modal-content">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -34,7 +34,7 @@
    
   <!-- register form -->
   
-  <form class="form-width" #loginForm="ngForm" (ngSubmit)="onSubmit()" method="post" *ngIf="!showFirst"  [@slideInOut] id="form_add">
+  <form class="form-width" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" method="post" *ngIf="!showFirst"  [@slideInOut] id="form_add">
       <h5 class="heading-size">Register</h5>
       <div class="row">
   <div class="col-md-6">    
@@ -69,7 +69,7 @@
     <label class="topSpace">Gender </label><br>
     <div class="form-check-inline">
       <label class="form-check-label">
-        <input type="radio" name="gender" class="form-check-input" [(ngModel)]="model.gender" value="male" #gender="ngModel" checked0>
+        <input type="radio" name="gender" class="form-check-input" [(ngModel)]="model.gender" value="male" #gender="ngModel" checked>
       Male</label>
     </div>
     <div class="form-check-inline"> 
